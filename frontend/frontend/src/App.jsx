@@ -1,9 +1,8 @@
-import { useState } from "react";
-import Login from "./components/organisms/login";
+import LoginPage from "./pages/loginPage";
+function App(){
 
-function App() {
+  return <LoginPage/>
 
-  return ( <Login labels={["Usuario", "Correo", "Contraseña", "tipo"]} />);
+
 }
-
 export default App;
