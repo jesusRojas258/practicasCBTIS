@@ -1,25 +1,38 @@
 import Login from "../components/organisms/login";
+import Title from "../components/atoms/title";
+import Navbar from "../components/organisms/navbar/navbar";
+import { useLogin } from "../hooks/useLogin";
 
 function LoginPage() {
+  const login = useLogin();
 
-  return ( 
+  return (
+    <div>
 
-    <div className="container min-vh-100 d-flex justify-content-center align-items-center">
+      <div>
+
+        <Navbar
+      
+        />
+
+      </div>
+    
+      <div className="container min-vh-100 d-flex justify-content-center align-items-center">
         <div className="col-12 col-md-6 col-lg-4">
-
-
-            <Login 
-                labels={["Usuario", "Correo", "Contraseña", "tipo"]}
-                buttonTxt="Ingresar"
-                url= "https://www.google.com/search?client=opera-gx&q=url+en+jsx&sourceid=opera&ie=UTF-8&oe=UTF-8"
-                urlText="Crea una cuenta"
-            
-            />
+          <Title
+            titulo = "Inicio de sesion"
+          />
+          <Login
+            {...login}
+            buttonTxt="Ingresar"
+            href="/register"
+            text="Crea una cuenta"
+          />
         </div>
-    </div>
-  
-  
+      </div>
 
+    </div>
+    
   );
 }
 

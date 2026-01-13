@@ -1,6 +1,6 @@
-function Url({url, urlText}){
+function Url({href, text, className}){
 
-   return <a className="form-a d-block mt-3" href={url}>{urlText}</a>
+   return <a className={className} href={href}>{text}</a>
 
 
 }

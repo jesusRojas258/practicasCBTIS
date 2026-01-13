@@ -8,17 +8,14 @@ export function useLogin() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Usuario:", usuario);
     console.log("Correo:", correo);
     console.log("Password:", password);
-    alert("asd");
+    alert("Inicio de sesion correcto");
   };
 
   return {
-    usuario,
     correo,
     password,
-    setUsuario,
     setCorreo,
     setPassword,
     handleSubmit,
