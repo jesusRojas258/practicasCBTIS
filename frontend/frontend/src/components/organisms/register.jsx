@@ -3,12 +3,12 @@ import Button from "../atoms/button";
 import Title from "../atoms/title";
 import Url from "../atoms/url";
 function Register({
-    nombre,
+    nombres,
     apellidos,
     correo,
     password,
     confirmPassword,
-    setNombre,
+    setNombres,
     setApellidos,
     setCorreo,
     setPassword,
@@ -24,7 +24,7 @@ function Register({
 
             <form onSubmit={handleSubmit}>
                 <Title titulo="Solicita una Cuenta"/>
-                <Campo label="Nombre" value={nombre} required onChange={e => setNombre(e.target.value)} />
+                <Campo label="Nombres" value={nombres} onChange={e => setNombres(e.target.value)} />
                 <Campo label="Apellidos" value={apellidos} onChange={e => setApellidos(e.target.value)}/>
                 <Campo label="Correo" type="email" value={correo} onChange={e => setCorreo(e.target.value)}/>
                 <Campo label="Contraseña" type="password" value={password} onChange={e => setPassword(e.target.value)}/>

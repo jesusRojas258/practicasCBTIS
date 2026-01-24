@@ -1,11 +1,16 @@
-const http = require('http');
+/**
+ * @file:       server.js
+ * @project:    PracticasCbtis
+ * @brief:      Punto de arranque del servidor
+ * author:      Jesus Rojas
+ * @date:       24-01-2026
+*/
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Servidor funcionando correctamente ');
-});
+require("dotenv").config();
+const app = require("./src/app");
 
-server.listen(3000, () => {
-    console.log('Servidor escuchando en http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
 });
-    
