@@ -20,7 +20,7 @@ function Login({
       <Campo label="Correo" type="email" value={correo} onChange={e => setCorreo(e.target.value)} />
       <Campo label="Contraseña" type="password" value={password} onChange={e => setPassword(e.target.value)} />
 
-      <Button buttonTxt={buttonTxt} />
+      <Button buttonTxt={buttonTxt} className="btn btn-primary w-100" />
       <Url href={href} text={text} />
     </form>
   );

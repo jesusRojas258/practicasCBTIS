@@ -17,7 +17,10 @@ const cuentasController = require("../controllers/cuentas.controller");
 
 
 //Rutas
-router.post("/solicitaCuentaNueva", cuentasController.solicitarCuentaNueva);
+router.post("/solicitarCuentaNueva", cuentasController.solicitarCuentaNueva);
+//router.post("/aceptarSolicitud", cuentasController.aceptarSolicitud);
+//router.post("/eliminarSolicitud", cuentasController.eliminarSolicitud);
+router.get("/obtenerSolicitudes", cuentasController.obtenerSolicitudes);
 
 
 module.exports = router;

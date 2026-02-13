@@ -23,8 +23,14 @@ app.use(cors({
 app.use(express.json());
 
 // Rutas
+
+//cuentas
 const cuentasRoutes = require("./routes/cuentas.routes");
 app.use("/api/cuentas", cuentasRoutes);
+const alumnosRoutes = require("./routes/alumnos.routes");
+app.use("/api/obtenerSolicitudes", alumnosRoutes);
+
+
 
 module.exports = app;
 

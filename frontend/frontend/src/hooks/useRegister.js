@@ -22,7 +22,7 @@ export function useRegister() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/cuentas/solicitaCuentaNueva",
+        "http://localhost:3000/api/cuentas/solicitarCuentaNueva",
         {
           method: "POST",
           headers: {

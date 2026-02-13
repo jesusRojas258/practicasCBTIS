@@ -2,7 +2,7 @@ import Campo from "../molecules/campo";
 import Button from "../atoms/button";
 import Title from "../atoms/title";
 import Url from "../atoms/url";
-function Register({
+function Register({ 
     nombres,
     apellidos,
     correo,
@@ -30,7 +30,7 @@ function Register({
                 <Campo label="Contraseña" type="password" value={password} onChange={e => setPassword(e.target.value)}/>
                 <Campo label="Confirmar contraseña" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
 
-                <Button buttonTxt="Solicitar cuenta" />
+                <Button buttonTxt="Solicitar cuenta" className="btn btn-primary w-100" />
                 <Url text="Inicia sesion" href="/"/>
             </form>
           
